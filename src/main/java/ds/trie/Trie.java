@@ -22,10 +22,27 @@ public class Trie
             tempNode = tempNode.children[c-'a'];
         }
         tempNode.isEndOfWord = true;
-
     }
 
+    // Returns true if key presents in trie, else false
     public boolean search(String word)
+    {
+        tempNode = root;
+
+        for( char c: word.toCharArray())
+        {
+            //check if c is indexed or not
+            if(tempNode.children[c-'a'] == null)
+                return false;
+
+            //Navigate to next level
+            tempNode = tempNode.children[c-'a'];
+        }
+
+        return (tempNode.isEndOfWord);
+    }
+
+    public boolean searchRecursive(String word)
     {
         return isMatch(word, root, 0, true);
     }

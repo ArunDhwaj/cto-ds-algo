@@ -53,5 +53,12 @@ public class Router {
         isPresent = trie.startsWith("pen");
         System.out.println("5. In Trie: 'pen' isPresent?: " + isPresent );
 
+        isPresent = trie.startsWith("sbp");
+        System.out.println("6. In Trie: Search 'sbp' before inserting : " + isPresent );
+
+        trie.insert("sbp");
+        isPresent = trie.startsWith("sbp");
+        System.out.println("7. In Trie: Search 'sbp' after inserting : " + isPresent );
+
     }
 }
