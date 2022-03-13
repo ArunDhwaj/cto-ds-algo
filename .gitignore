@@ -1,3 +1,11 @@
+# All files in tmp or build directory
+build
+build/*
+build/tmp
+tmp/*
+.gradle
+.gradle/*
+
 # Compiled class file
 *.class
 
